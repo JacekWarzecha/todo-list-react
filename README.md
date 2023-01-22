@@ -2,11 +2,11 @@
 
 ### Join this page and have fun with your goals.
 
-### Click to connect -> ## [link](https://jacekwarzecha.github.io/todo-list-react/)
+### Click to connect -> **[link]**(https://jacekwarzecha.github.io/todo-list-react/)
 
 ### View from the App:
 
-![view-from-the-App](src/OG.jpg)
+![view-from-the-App](src/ToDoApp.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

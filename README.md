@@ -2,7 +2,7 @@
 
 ### Join this page and have fun with your goals.
 
-### Click to connect -> **[link]**(https://jacekwarzecha.github.io/todo-list-react/)
+### Click to connect -> [link](https://jacekwarzecha.github.io/todo-list-react/)
 
 ### View from the App:
 

@@ -50,13 +50,16 @@
 
 ::-webkit-input-placeholder {
     color: #9da2a5;
-    }
-    :-moz-placeholder { 
+}
+
+:-moz-placeholder { 
     color: #9da2a5;
-    }
-    ::-moz-placeholder { 
+}
+
+::-moz-placeholder { 
     color: #9da2a5;
-    }
-    :-ms-input-placeholder {
+}
+
+:-ms-input-placeholder {
     color: #9da2a5;
-    }
+}

@@ -6,7 +6,7 @@
 
 ### View from the App:
 
-![view-from-the-App](src/ToDoApp.gif)
+![view-from-the-App](src/toDoApp.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-const RemoteButtons = ({ tasks, hideDone }) => (
+const RemoteButtons = ({ tasks, hideDone, toggleHideDone }) => (
   <div className="remoteButtons">
     {tasks.length > 0 && (
       <>
-        <button className="remoteButtons__buttons">
+        <button onClick={toggleHideDone} className="remoteButtons__buttons">
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </button>
 

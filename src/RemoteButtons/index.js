@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const RemoteButtons = ({ tasks, hideDoneTasks }) => (
+const RemoteButtons = ({ tasks, hideDone }) => (
   <div className="remoteButtons">
     {tasks.length > 0 && (
       <>
         <button className="remoteButtons__buttons">
-          {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+          {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </button>
 
         <button

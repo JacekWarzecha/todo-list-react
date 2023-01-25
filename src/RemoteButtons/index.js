@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const RemoteButtons = ({ tasks, hideDone, toggleHideDone }) => (
+const RemoteButtons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
   <div className="remoteButtons">
     {tasks.length > 0 && (
       <>
@@ -10,6 +10,7 @@ const RemoteButtons = ({ tasks, hideDone, toggleHideDone }) => (
         </button>
 
         <button
+          onClick={setAllDone}
           className="remoteButtons__buttons"
           disabled={tasks.every(({ done }) => done)}
         >

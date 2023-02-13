@@ -3,11 +3,14 @@ import { useState } from "react";
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
+
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    if (newTaskContent !== "") {
-      addNewTask(newTaskContent.trim());
+    const trimmedNewTaskContent = newTaskContent.trim();
+
+    if (trimmedNewTaskContent !== "") {
+      addNewTask(trimmedNewTaskContent);
     }
 
     setNewTaskContent("");

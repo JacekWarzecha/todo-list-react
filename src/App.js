@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import RemoteButtons from "./RemoteButtons";
@@ -8,10 +8,8 @@ import Container from "./Container";
 import React from "react";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Przejść na reacta", done: false },
-    { id: 2, content: "Zjeść obiad", done: true },
-  ]);
+  localStorage.removeItem("co z tego");
+  const [tasks, setTasks] = useState([]);
 
   const [hideDone, setHideDone] = useState(false);
 
@@ -53,6 +51,10 @@ function App() {
       },
     ]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  });
 
   return (
     <Container>

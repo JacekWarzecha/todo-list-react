@@ -8,8 +8,13 @@ import Container from "./Container";
 import React from "react";
 
 function App() {
-  localStorage.removeItem("co z tego");
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks") || [])
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const [hideDone, setHideDone] = useState(false);
 
@@ -48,10 +53,6 @@ function App() {
       },
     ]);
   };
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  });
 
   return (
     <Container>

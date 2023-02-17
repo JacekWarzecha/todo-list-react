@@ -9,7 +9,7 @@ import React from "react";
 
 function App() {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks") || [])
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
   useEffect(() => {

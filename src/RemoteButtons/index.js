@@ -1,24 +1,23 @@
 import React from "react";
-import "./style.css";
+import { RemoteButtonsArea, Buttons } from "./styled.js";
 
 const RemoteButtons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-  <div className="remoteButtons">
+  <RemoteButtonsArea>
     {tasks.length > 0 && (
       <>
-        <button onClick={toggleHideDone} className="remoteButtons__buttons">
+        <Buttons onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
-        </button>
+        </Buttons>
 
-        <button
+        <Buttons
           onClick={setAllDone}
-          className="remoteButtons__buttons"
           disabled={tasks.every(({ done }) => done)}
         >
           Ukończ wszystkie
-        </button>
+        </Buttons>
       </>
     )}
-  </div>
+  </RemoteButtonsArea>
 );
 
 export default RemoteButtons;

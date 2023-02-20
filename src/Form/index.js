@@ -1,4 +1,3 @@
-import "./style.css";
 import { useState } from "react";
 import { StyledForm, Input, Button } from "./styled";
 

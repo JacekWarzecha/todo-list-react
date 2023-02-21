@@ -1,7 +1,11 @@
-import React from "react";
 import { RemoteButtonsArea, Buttons } from "./styled.js";
 
-const RemoteButtons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
+export const RemoteButtons = ({
+  tasks,
+  hideDone,
+  toggleHideDone,
+  setAllDone,
+}) => (
   <RemoteButtonsArea>
     {tasks.length > 0 && (
       <>
@@ -19,5 +23,3 @@ const RemoteButtons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
     )}
   </RemoteButtonsArea>
 );
-
-export default RemoteButtons;

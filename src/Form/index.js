@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { StyledForm, Input, Button } from "./styled";
 
-const Form = ({ addNewTask }) => {
+export const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
   const inputRef = useRef(null);
 
@@ -36,4 +36,3 @@ const Form = ({ addNewTask }) => {
     </StyledForm>
   );
 };
-export default Form;

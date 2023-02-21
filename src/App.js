@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Form from "./Form";
-import Tasks from "./Tasks";
-import RemoteButtons from "./RemoteButtons";
-import Section from "./Section";
-import Header from "./Header";
-import Container from "./Container";
-import React from "react";
+import { Form } from "./Form";
+import { Tasks } from "./Tasks";
+import { RemoteButtons } from "./RemoteButtons";
+import { Section } from "./Section";
+import { Header } from "./Header";
+import { Container } from "./Container";
 import { useTasks } from "./useTasks";
 
 function App() {

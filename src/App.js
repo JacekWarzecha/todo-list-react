@@ -6,7 +6,7 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 import React from "react";
-import { useTasks } from "./usetasks";
+import { useTasks } from "./useTasks";
 
 function App() {
   const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } =

@@ -6,7 +6,6 @@ import { Section } from "./Section";
 import { Header } from "./Header";
 import { Container } from "./Container";
 import { useTasks } from "./useTasks";
-import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
   const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } =
@@ -20,7 +19,6 @@ function App() {
 
   return (
     <Container>
-      <GlobalStyle />
       <Header title="Lista zadań" />
 
       <Section

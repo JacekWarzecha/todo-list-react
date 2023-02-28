@@ -13,7 +13,8 @@ html {
   
 #root {
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #e8edf1;
+  background: ${({ theme }) => theme.color.gallery};
   word-break: break-word;
+  min-height: 100vh;
 }
 `;

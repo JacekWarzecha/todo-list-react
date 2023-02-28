@@ -12,7 +12,7 @@ export const Item = styled.li`
   grid-gap: 10px;
   padding: 10px;
   align-items: center;
-  border-bottom: 1px solid #e8edf1;
+  border-bottom: 1px solid ${({ theme }) => theme.color.alto};
 
   ${({ hidden }) =>
     hidden &&
@@ -30,33 +30,31 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
+  border: none;
+  color: ${({ theme }) => theme.color.white};
   width: 30px;
   height: 30px;
   padding: 0;
-  &:hover {
-    cursor: pointer;
-  }
+  transition: filter 0.25s;
+
   ${({ toggleDone }) =>
     toggleDone &&
     css`
-      background-color: hsl(120, 100%, 25%);
-      color: white;
-      border: 1px solid green;
-      transition: 0.25s;
-      &:hover {
-        background-color: hsl(120, 100%, 30%);
-      }
+      background: ${({ theme }) => theme.color.forestGreen};
     `}
 
   ${({ remove }) =>
     remove &&
     css`
-      background-color: hsl(0, 100%, 50%);
-      border: 1px solid red;
-      transition: 0.25s;
-
-      &:hover {
-        background-color: hsl(0, 100%, 65%);
-      }
+      background: ${({ theme }) => theme.color.crimson};
     `}
+
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+  }
+
+  &:active {
+    filter: brightness(120%);
+  }
 `;

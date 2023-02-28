@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-  background-color: #ffffff;
+  background: ${({ theme }) => theme.color.white};
   margin: 10px 0;
-  box-shadow: 0 0 2px #ccc;
+  box-shadow: 0 0 2px ${({ theme }) => theme.color.alto};
 `;
 
 export const Header = styled.header`
@@ -13,9 +13,9 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #e8edf1;
+  border-bottom: 1px solid ${({ theme }) => theme.color.alto};
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
   }
 `;

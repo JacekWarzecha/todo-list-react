@@ -5,56 +5,32 @@ export const StyledForm = styled.form`
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const Input = styled.input`
   padding: 10px;
-  border: 1px solid #e8edf1;
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #9da2a5;
-  }
-
-  :-moz-placeholder {
-    color: #9da2a5;
-  }
-
-  ::-moz-placeholder {
-    color: #9da2a5;
-  }
-
-  :-ms-input-placeholder {
-    color: #9da2a5;
-  }
+  border: 1px solid ${({ theme }) => theme.color.alto};
 `;
 
 export const Button = styled.button`
-  background-color: hsl(180, 100%, 25%);
-  color: #e8edf1;
+  background: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
   padding: 10px;
-  border: 1px solid #e8edf1;
-  border-radius: 2px;
+  border: none;
+  border-radius: 1px;
   transition: 0.5s 0.1s, 0.5s;
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
 
   &:hover {
     cursor: pointer;
-    background-color: hsl(180, 100%, 30%);
+    filter: brightness(110%);
     transform: scale(1.1);
   }
 
   &:active {
-    background-color: hsl(180, 100%, 35%);
-    transform: translateY(-10px);
+    filter: brightness(120%);
+    transform: translateY(-5px);
   }
 `;

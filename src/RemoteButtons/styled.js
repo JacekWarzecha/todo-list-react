@@ -7,22 +7,26 @@ export const RemoteButtonsArea = styled.div`
 
 export const Buttons = styled.button`
   margin: 0 0 0 20px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: hsl(180, 100%, 25%);
+  background-color: transparent;
+  color: ${({ theme }) => theme.color.teal};
+  border: none;
   transition: 0.25s;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     flex-basis: 100%;
     margin: 10px;
   }
 
   &:hover {
-    color: hsl(180, 100%, 30%);
+    filter: brightness(110%);
     cursor: pointer;
   }
 
+  &:active {
+    filter: brightness(120%);
+  }
+
   &:disabled {
-    color: #ccc;
+    color: ${({ theme }) => theme.color.silver};
   }
 `;

@@ -1,14 +1,22 @@
 import { RemoteButtonsArea, Buttons } from "./styled.js";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleHideDone, setAllDone } from "../tasksSlice.js";
+import {
+  selectHideDone,
+  selectAreTasksEmpty,
+  selectIsEveryTaskDone,
+  toggleHideDone,
+  setAllDone,
+} from "../tasksSlice.js";
 
 export const RemoteButtons = () => {
-  const { tasks, hideDone } = useSelector(selectTasks);
+  const areTasksEmpty = useSelector(selectAreTasksEmpty);
+  const isEveryTaskDone = useSelector(selectIsEveryTaskDone);
+  const hideDone = useSelector(selectHideDone);
 
   const dispatch = useDispatch();
   return (
     <RemoteButtonsArea>
-      {tasks.length > 0 && (
+      {!areTasksEmpty && (
         <>
           <Buttons onClick={() => dispatch(toggleHideDone())}>
             {hideDone ? "Pokaż" : "Ukryj"} ukończone
@@ -16,7 +24,7 @@ export const RemoteButtons = () => {
 
           <Buttons
             onClick={() => dispatch(setAllDone())}
-            disabled={tasks.every(({ done }) => done)}
+            disabled={isEveryTaskDone}
           >
             Ukończ wszystkie
           </Buttons>

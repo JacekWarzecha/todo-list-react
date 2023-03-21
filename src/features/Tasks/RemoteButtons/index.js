@@ -1,8 +1,8 @@
 import { RemoteButtonsArea, Buttons } from "./styled.js";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleHideDone } from "../tasksSlice.js";
+import { selectTasks, toggleHideDone, setAllDone } from "../tasksSlice.js";
 
-export const RemoteButtons = ({ setAllDone }) => {
+export const RemoteButtons = () => {
   const { tasks, hideDone } = useSelector(selectTasks);
 
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ export const RemoteButtons = ({ setAllDone }) => {
           </Buttons>
 
           <Buttons
-            onClick={setAllDone}
+            onClick={() => dispatch(setAllDone())}
             disabled={tasks.every(({ done }) => done)}
           >
             Ukończ wszystkie

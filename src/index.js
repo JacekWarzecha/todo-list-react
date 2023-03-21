@@ -6,7 +6,6 @@ import { GlobalStyle } from "./GlobalStyle";
 import { theme } from "./theme";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
-
 import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

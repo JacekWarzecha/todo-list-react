@@ -4,7 +4,7 @@
 
 ### Click to connect -> [link](https://jacekwarzecha.github.io/todo-list-react/)
 
-**Used technoglies:**
+## Used technoglies:
 
 - React
 - Redux

@@ -6,6 +6,7 @@ import {
   selectIsEveryTaskDone,
   toggleHideDone,
   setAllDone,
+  fetchExampleTasks,
 } from "../tasksSlice.js";
 
 export const RemoteButtons = () => {
@@ -16,6 +17,9 @@ export const RemoteButtons = () => {
   const dispatch = useDispatch();
   return (
     <RemoteButtonsArea>
+      <Buttons onClick={() => dispatch(fetchExampleTasks())}>
+        Pobierz przykładowe zadania
+      </Buttons>
       {!areTasksEmpty && (
         <>
           <Buttons onClick={() => dispatch(toggleHideDone())}>

@@ -18,6 +18,7 @@ export const List = styled.ul`
   justify-content: center;
   margin: 0;
   align-items: center;
+  padding-left: 0;
 `;
 
 export const ListItem = styled.li`

@@ -7,7 +7,7 @@ import {
   toggleHideDone,
   setAllDone,
   fetchExampleTasks,
-} from "../tasksSlice.js";
+} from "../../tasksSlice.js";
 
 export const RemoteButtons = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);

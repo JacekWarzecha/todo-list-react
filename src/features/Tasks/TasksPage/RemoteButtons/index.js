@@ -1,4 +1,5 @@
-import { RemoteButtonsArea, Buttons } from "./styled.js";
+import { RemoteButtonsArea } from "./styled.js";
+import { Buttons } from "../Buttons/index.js";
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectHideDone,
@@ -6,7 +7,6 @@ import {
   selectIsEveryTaskDone,
   toggleHideDone,
   setAllDone,
-  fetchExampleTasks,
 } from "../../tasksSlice.js";
 
 export const RemoteButtons = () => {
@@ -17,9 +17,6 @@ export const RemoteButtons = () => {
   const dispatch = useDispatch();
   return (
     <RemoteButtonsArea>
-      <Buttons onClick={() => dispatch(fetchExampleTasks())}>
-        Pobierz przykładowe zadania
-      </Buttons>
       {!areTasksEmpty && (
         <>
           <Buttons onClick={() => dispatch(toggleHideDone())}>

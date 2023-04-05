@@ -4,8 +4,8 @@ import { RemoteButtons } from "./RemoteButtons";
 import { Section } from "../../../common/Section";
 import { Header } from "../../../common/Header";
 import { Container } from "../../../common/Container";
-import Search from "./Search";
 import { LoadExampleTasks } from "./LoadExampleTasks";
+import Search from "./Search";
 
 function TasksPage() {
   return (

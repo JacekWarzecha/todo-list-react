@@ -62,5 +62,5 @@ export const Button = styled.button`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #008080;
+  color: ${({ theme }) => theme.color.teal}; ;
 `;

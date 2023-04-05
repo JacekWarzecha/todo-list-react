@@ -29,8 +29,6 @@ export const Form = () => {
         })
       );
     }
-    console.log(trimmedNewTaskContent);
-
     setNewTaskContent("");
   };
 

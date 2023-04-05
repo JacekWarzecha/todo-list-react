@@ -14,7 +14,7 @@ export const Navigation = styled.nav``;
 export const List = styled.ul`
   display: flex;
   list-style: none;
-  background: teal;
+  background: ${({ theme }) => theme.color.teal};
   justify-content: center;
   margin: 0;
   align-items: center;

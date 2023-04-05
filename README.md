@@ -8,6 +8,9 @@
 
 - React
 - Redux
+- Redux-router
+- Redux-saga
+- reduxjs/toolkit
 - JavaScript
 - styled-components
 
